@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="84dp">
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/image_top_guideline"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_begin="12dp" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/image_start_guideline"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_begin="16dp" />
+
+  <androidx.constraintlayout.widget.Barrier
+    android:id="@+id/image_barrier"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:barrierDirection="end"
+    app:constraint_referenced_ids="top_right,right,single" />
+
+  <com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/top_left"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    app:layout_constraintStart_toStartOf="@id/image_start_guideline"
+    app:layout_constraintTop_toTopOf="@id/image_top_guideline"
+    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Example.TopLeft"
+    tools:src="@tools:sample/avatars" />
+
+  <com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/top_right"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    app:layout_constraintStart_toEndOf="@id/top_left"
+    app:layout_constraintTop_toTopOf="@id/top_left"
+    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Example.TopRight"
+    tools:src="@tools:sample/avatars" />
+
+  <com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/bottom_left"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    app:layout_constraintStart_toStartOf="@id/top_left"
+    app:layout_constraintTop_toBottomOf="@id/top_left"
+    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Example.BottomLeft"
+    tools:src="@tools:sample/avatars" />
+
+  <com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/bottom_right"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    app:layout_constraintStart_toEndOf="@id/bottom_left"
+    app:layout_constraintTop_toTopOf="@id/bottom_left"
+    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Example.BottomRight"
+    tools:src="@tools:sample/avatars" />
+
+  <com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/left"
+    android:layout_width="30dp"
+    android:layout_height="60dp"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    android:visibility="gone"
+    app:layout_constraintStart_toStartOf="@id/image_start_guideline"
+    app:layout_constraintTop_toTopOf="@id/image_top_guideline"
+    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Example.Left"
+    tools:src="@tools:sample/avatars" />
+
+  <com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/right"
+    android:layout_width="30dp"
+    android:layout_height="60dp"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    android:visibility="gone"
+    app:layout_constraintStart_toEndOf="@id/left"
+    app:layout_constraintTop_toTopOf="@id/left"
+    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Example.Right"
+    tools:src="@tools:sample/avatars" />
+
+  <com.google.android.material.imageview.ShapeableImageView
+    android:id="@+id/single"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:adjustViewBounds="true"
+    android:background="#dddddd"
+    android:scaleType="centerCrop"
+    android:visibility="gone"
+    app:layout_constraintStart_toStartOf="@id/image_start_guideline"
+    app:layout_constraintTop_toTopOf="@id/image_top_guideline"
+    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Example.PILL"
+    tools:src="@tools:sample/avatars" />
+
+  <TextView
+    android:id="@+id/name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:ellipsize="end"
+    android:lines="1"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    app:layout_constrainedWidth="true"
+    app:layout_constraintBottom_toTopOf="@id/message"
+    app:layout_constraintEnd_toStartOf="@id/user_id"
+    app:layout_constraintHorizontal_bias="0"
+    app:layout_constraintHorizontal_chainStyle="packed"
+    app:layout_constraintStart_toEndOf="@id/image_barrier"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_chainStyle="packed"
+    tools:text="TESTTESTTES" />
+
+  <TextView
+    android:id="@+id/user_id"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="6dp"
+    android:layout_marginEnd="8dp"
+    android:lines="1"
+    android:textSize="13sp"
+    app:layout_constraintBottom_toBottomOf="@id/name"
+    app:layout_constraintEnd_toStartOf="@id/date"
+    app:layout_constraintStart_toEndOf="@id/name"
+    app:layout_constraintTop_toTopOf="@id/name"
+    tools:text="your id" />
+
+  <TextView
+    android:id="@+id/date"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="16dp"
+    android:textSize="12sp"
+    app:layout_constraintBottom_toBottomOf="@id/user_id"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@id/user_id"
+    tools:text="@tools:sample/date/mmddyy" />
+
+  <TextView
+    android:id="@+id/message"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp"
+    android:ellipsize="end"
+    android:maxLines="2"
+    android:textSize="13sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="@id/date"
+    app:layout_constraintStart_toStartOf="@id/name"
+    app:layout_constraintTop_toBottomOf="@id/name"
+    tools:text="@tools:sample/full_names" />
+</androidx.constraintlayout.widget.ConstraintLayout>

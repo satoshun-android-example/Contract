@@ -7,7 +7,7 @@ import androidx.navigation.fragment.findNavController
 import com.github.satoshun.example.databinding.MainFragBinding
 
 class MainFragment : Fragment(R.layout.main_frag) {
-  private val binding: MainFragBinding get() = MainFragBinding.bind(view!!)
+  private val binding: MainFragBinding get() = MainFragBinding.bind(requireView())
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)

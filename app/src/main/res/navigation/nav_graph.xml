@@ -13,10 +13,19 @@
     <action
       android:id="@+id/nav_main_to_permission"
       app:destination="@id/nav_permission" />
+
+    <action
+      android:id="@+id/nav_main_to_start_activity_for_result"
+      app:destination="@id/nav_start_activity_for_result" />
   </fragment>
 
   <fragment
     android:id="@+id/nav_permission"
     android:name="com.github.satoshun.example.permission.PermissionFragment"
     tools:layout="@layout/permission_frag" />
+
+  <fragment
+    android:id="@+id/nav_start_activity_for_result"
+    android:name="com.github.satoshun.example.startactivityforresult.StartActivityForResultFragment"
+    tools:layout="@layout/start_activity_for_result_frag" />
 </navigation>

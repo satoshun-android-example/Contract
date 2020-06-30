@@ -15,5 +15,9 @@ class MainFragment : Fragment(R.layout.main_frag) {
     binding.permission.setOnClickListener {
       findNavController().navigate(MainFragmentDirections.navMainToPermission())
     }
+
+    binding.startActivity.setOnClickListener {
+      findNavController().navigate(MainFragmentDirections.navMainToStartActivityForResult())
+    }
   }
 }

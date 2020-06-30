@@ -17,6 +17,10 @@
     <action
       android:id="@+id/nav_main_to_start_activity_for_result"
       app:destination="@id/nav_start_activity_for_result" />
+
+    <action
+      android:id="@+id/nav_main_to_get_content"
+      app:destination="@id/nav_get_content" />
   </fragment>
 
   <fragment
@@ -28,4 +32,9 @@
     android:id="@+id/nav_start_activity_for_result"
     android:name="com.github.satoshun.example.startactivityforresult.StartActivityForResultFragment"
     tools:layout="@layout/start_activity_for_result_frag" />
+
+  <fragment
+    android:id="@+id/nav_get_content"
+    android:name="com.github.satoshun.example.getcontent.GetContentFragment"
+    tools:layout="@layout/get_content_frag" />
 </navigation>

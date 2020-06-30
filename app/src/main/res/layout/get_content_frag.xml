@@ -8,20 +8,8 @@
   tools:ignore="HardcodedText">
 
   <Button
-    android:id="@+id/permission"
+    android:id="@+id/image"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="Permissions" />
-
-  <Button
-    android:id="@+id/start_activity"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="StartActivityForResult" />
-
-  <Button
-    android:id="@+id/get_content"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Get Content" />
+    android:text="Get Image" />
 </LinearLayout>

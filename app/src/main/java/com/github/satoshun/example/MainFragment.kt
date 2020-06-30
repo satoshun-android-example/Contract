@@ -19,5 +19,9 @@ class MainFragment : Fragment(R.layout.main_frag) {
     binding.startActivity.setOnClickListener {
       findNavController().navigate(MainFragmentDirections.navMainToStartActivityForResult())
     }
+
+    binding.getContent.setOnClickListener {
+      findNavController().navigate(MainFragmentDirections.navMainToGetContent())
+    }
   }
 }

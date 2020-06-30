@@ -8,7 +8,13 @@
   tools:ignore="HardcodedText">
 
   <Button
-    android:id="@+id/permission"
+    android:id="@+id/fine_location"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Fine Location" />
+
+  <Button
+    android:id="@+id/permissions"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="Permissions" />

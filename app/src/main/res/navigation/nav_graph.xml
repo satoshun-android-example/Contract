@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/nav_main">
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/nav_graph.xml"
+  app:startDestination="@id/nav_main">
 
-    <fragment
-        android:id="@+id/nav_main"
-        android:name="com.github.satoshun.example.MainFragment">
+  <fragment
+    android:id="@+id/nav_main"
+    android:name="com.github.satoshun.example.MainFragment"
+    tools:layout="@layout/main_frag">
 
-        <action
-            android:id="@+id/nav_main_to_sample"
-            app:destination="@id/nav_sample" />
-    </fragment>
+    <action
+      android:id="@+id/nav_main_to_permission"
+      app:destination="@id/nav_permission" />
+  </fragment>
 
-    <fragment
-        android:id="@+id/nav_sample"
-        android:name="com.github.satoshun.example.sample.SampleFragment" />
+  <fragment
+    android:id="@+id/nav_permission"
+    android:name="com.github.satoshun.example.permission.PermissionFragment"
+    tools:layout="@layout/permission_frag" />
 </navigation>

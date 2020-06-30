@@ -12,8 +12,8 @@ class MainFragment : Fragment(R.layout.main_frag) {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    binding.divideIntoFourImage.setOnClickListener {
-      findNavController().navigate(MainFragmentDirections.navMainToSample())
+    binding.permission.setOnClickListener {
+      findNavController().navigate(MainFragmentDirections.navMainToPermission())
     }
   }
 }
